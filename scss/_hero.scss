@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: #222;
+  color: #fff;
+  transition: background 0.4s ease, color 0.4s ease;
+
+  .generate__numbers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 80%;
+    max-width: 1000px;
+    height: 800px;
+
+    .generate__btn {
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      background: rgba(181, 248, 81, 0.713);
+      border: none;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      .light-btn {
+        background: black;
+        color: #efda46;
+        padding: 15px 60px;
+        font-size: 25px;
+        border-radius: 10px;
+        border: 1px solid gold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .add_phone,
+      .list__numbers,
+      .generate__btn {
+        padding: 15px 30px;
+        font-size: 18px;
+        border-radius: 10px;
+        cursor: pointer;
+        background: rgba(181, 248, 81, 0.713);
+        border: none;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    .title {
+      font-size: 5vw;
+      text-align: center;
+    }
+
+    ul {
+      display: none;
+      position: absolute;
+      top: 45%;
+      right: 43;
+      background: dodgerblue;
+      width: 300px;
+      height: 200px;
+      overflow-y: auto;
+      border-radius: 10px;
+      padding: 10px;
+      list-style-type: none;
+    }
+  }
+
+  &.light {
+    background: white;
+    color: black;
+
+    .buttons .light-btn {
+      background: rgb(12, 128, 245);
+    }
+
+    ul {
+      background: gray;
+    }
+  }
+}
